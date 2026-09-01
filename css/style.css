@@ -127,6 +127,7 @@ p{color:var(--gray-text);}
 .page-block ul{margin:6px 0 18px 0;}
 .page-block ul li{position:relative;padding-left:20px;margin-bottom:8px;color:var(--gray-text);font-size:15px;}
 .page-block ul li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--red);border-radius:50%;}
+.page-block ul ul{margin-top:8px;margin-left:20px;}
 .note{font-style:italic;color:#8a8a8a;font-size:14px;}
 .divider{border:none;border-top:1px solid var(--line);margin:36px 0;}
 
@@ -333,3 +334,23 @@ footer{background:var(--black);color:rgba(255,255,255,0.55);padding:26px 0;text-
   .btn-big{padding:16px 28px;}
   .hero h1{font-size:clamp(30px,10vw,52px);}
 }
+
+/*
+Addition to CSS to allow Weigh-In Linup being in a column layout.
+*/
+
+.weight-classes{margin:30px auto 10px;max-width:600px;}
+.weight-classes .wc-title{text-align:center;color:var(--ink);font-family:var(--heading);font-weight:700;font-size:18px;margin-bottom:6px;}
+.weight-classes .wc-subtitle{text-align:center;color:var(--gray-text);font-size:13px;margin-bottom:24px;}
+.weight-classes .weight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.weight-classes .weight-col h5{text-align:center;color:var(--red);font-family:var(--heading);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid var(--line);}
+.weight-classes .weight-col ul{list-style:none;text-align:center;padding-left:0;margin:0;}
+.weight-classes .weight-col li{color:var(--ink);padding:5px 0;font-family:var(--mono);font-size:14.5px;padding-left:0;}
+.weight-classes .weight-col li::before{content:none;}
+
+@media (max-width:520px){
+  .weight-classes .weight-grid{grid-template-columns:1fr 1fr 1fr;gap:10px;}
+  .weight-classes .weight-col h5{font-size:11px;}
+  .weight-classes .weight-col li{font-size:13px;}
+}
+
