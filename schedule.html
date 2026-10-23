@@ -10,6 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
+
+
+
 <body>
 
 <svg width="0" height="0" style="position:absolute">
@@ -152,7 +155,7 @@
           <h4>Tough Guy Tournament</h4>
           <span class="event-tag tag-tourney">Tournament</span>
         </div>
-        <p class="event-location">Franklin Pierce High School</p>
+<p class="event-location">Tacoma Convention Center<br><a class="map-link" data-address="Tacoma Convention Center, Tacoma, WA" href="https://www.google.com/maps/search/?api=1&amp;query=Tacoma+Convention+Center+Tacoma+WA" target="_blank" rel="noopener">1500 Commerce Street 5th Level Tacoma, Washington</a></p>
         
       </div>
     </div>
@@ -259,5 +262,19 @@
     });
   })();
 </script>
+
+<script>
+  // Apple Maps for iPhone/iPad users, Google Maps for everyone else
+  (function(){
+    var isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if(!isApple) return;
+    document.querySelectorAll('a.map-link[data-address]').forEach(function(a){
+      a.href = 'https://maps.apple.com/?q=' + encodeURIComponent(a.getAttribute('data-address'));
+    });
+  })();
+</script>
+
+</body>
 </body>
 </html>
