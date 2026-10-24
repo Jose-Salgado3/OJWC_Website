@@ -379,6 +379,6 @@ Addition to CSS to allow Weigh-In Linup being in a column layout.
 
 
 /* Event location map links */
-.event-location a{color:var(--red);font-weight:600;font-size: 12px;}
-.event-location a:hover{text-decoration:underline;}
+.event-location a{color:var(--red);font-weight:600;font-size:13px;text-decoration:underline;text-underline-offset:2px;}
+.event-location a:hover{color:#4da3ff;}
 
